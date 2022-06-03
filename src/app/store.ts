@@ -1,9 +1,13 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import reservationsReducer from "./reservationsSlice";
+import userReducer from "./userSlice";
 
 export const store = configureStore({
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ serializableCheck: false }),
   reducer: {
-    counter: counterReducer,
+    reservations: reservationsReducer,
+    user: userReducer,
   },
 });
 

@@ -1,15 +1,21 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
+import { render } from "@testing-library/react";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import App from "./App";
+import { Router } from "react-router-dom";
+import { createMemoryHistory } from "history";
 
-test('renders learn react link', () => {
+test("renders learn react link", () => {
+  const history = createMemoryHistory();
+  history.replace("/login");
+
   const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Router location={history.location} navigator={history}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Router>
   );
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
+  expect(getByText(/Welcome/i)).toBeInTheDocument();
 });

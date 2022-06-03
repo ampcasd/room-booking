@@ -1,0 +1,23 @@
+.login-window {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 75px auto;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.login-button {
+  margin-top: 20px;
+  border: 1px solid rgb(132, 122, 108);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: rgba(132, 122, 108, 0.1);
+}

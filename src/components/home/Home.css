@@ -1,0 +1,10 @@
+header {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  width: 500px;
+  margin: 50px 0;
+}

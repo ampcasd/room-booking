@@ -1,0 +1,20 @@
+table {
+  display: inline-table;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+td {
+  padding: 5px 10px;
+}
+
+td:last-child {
+  font-weight: 700;
+  cursor: pointer;
+  width: 110px;
+}
+
+td,
+td:last-child.reservation-locked {
+  cursor: default;
+}

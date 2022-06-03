@@ -1,0 +1,30 @@
+.wrapper {
+  margin: 20px;
+}
+
+.room-block {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.room-block:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+[data-selected],
+[data-selected]:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 10px;
+  padding: 4px;
+  border-radius: 7px;
+  margin-left: 10px;
+  margin-top: 16px;
+  line-height: 10px;
+  position: absolute;
+}
